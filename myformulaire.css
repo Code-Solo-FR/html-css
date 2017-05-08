@@ -1,0 +1,7 @@
+.contenu-blanc-avec-scroll{
+  overflow: auto; /*scroll*/
+  height: 100px;
+  width: auto;
+  border-color: 1px dashed red;
+
+}

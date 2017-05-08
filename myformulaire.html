@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<!--
+            CCCCCCCCCCCCC                             d::::::d                                                           lllllll
+     CCC::::::::::::C                             d::::::d                                                           l:::::l
+   CC:::::::::::::::C                             d::::::d                                                           l:::::l
+  C:::::CCCCCCCC::::C                             d:::::d                                                            l:::::l
+ C:::::C       CCCCCC   ooooooooooo       ddddddddd:::::d     eeeeeeeeeeee             ssssssssss      ooooooooooo    l::::l    ooooooooooo
+C:::::C               oo:::::::::::oo   dd::::::::::::::d   ee::::::::::::ee         ss::::::::::s   oo:::::::::::oo  l::::l  oo:::::::::::oo
+C:::::C              o:::::::::::::::o d::::::::::::::::d  e::::::eeeee:::::ee     ss:::::::::::::s o:::::::::::::::o l::::l o:::::::::::::::o
+C:::::C              o:::::ooooo:::::od:::::::ddddd:::::d e::::::e     e:::::e     s::::::ssss:::::so:::::ooooo:::::o l::::l o:::::ooooo:::::o
+C:::::C              o::::o     o::::od::::::d    d:::::d e:::::::eeeee::::::e      s:::::s  ssssss o::::o     o::::o l::::l o::::o     o::::o
+C:::::C              o::::o     o::::od:::::d     d:::::d e:::::::::::::::::e         s::::::s      o::::o     o::::o l::::l o::::o     o::::o
+C:::::C              o::::o     o::::od:::::d     d:::::d e::::::eeeeeeeeeee             s::::::s   o::::o     o::::o l::::l o::::o     o::::o
+ C:::::C       CCCCCCo::::o     o::::od:::::d     d:::::d e:::::::e                ssssss   s:::::s o::::o     o::::o l::::l o::::o     o::::o
+  C:::::CCCCCCCC::::Co:::::ooooo:::::od::::::ddddd::::::dde::::::::e               s:::::ssss::::::so:::::ooooo:::::ol::::::lo:::::ooooo:::::o
+   CC:::::::::::::::Co:::::::::::::::o d:::::::::::::::::d e::::::::eeeeeeee       s::::::::::::::s o:::::::::::::::ol::::::lo:::::::::::::::o
+     CCC::::::::::::C oo:::::::::::oo   d:::::::::ddd::::d  ee:::::::::::::e        s:::::::::::ss   oo:::::::::::oo l::::::l oo:::::::::::oo
+        CCCCCCCCCCCCC   ooooooooooo      ddddddddd   ddddd    eeeeeeeeeeeeee           sssssssssss       ooooooooooo   llllllll   ooooooooooo
+-->
+                           <!-- ################################################################################ -->
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <title>Document</title>
+    </head>
+                           <!-- ################################################################################ -->
+    <body>
+        <header>
+
+        </header>
+
+        <!-- ##################################################### -->
+
+        <form action="index.html" method="GET" class="form_flex">
+          <p>Compl&eacute;ter le formulaire<strong><abbr title="Remplir le formulaire">*</abbr></strong>.</p> <!-- abbr =abréviation ou acronyme -->
+
+          <p> <!-- Case a remplir Nom, Prénom, Age-->
+            <label for="nom"> <!-- Nom -->
+              <span>Nom : </span>
+              <input type="text" id="nom" name="nomdutilisateur" required />
+              <strong><abbr title="obligatoire">*</abbr></strong>
+            </label>
+          </p>
+
+          <p>
+            <label for="prenom"> <!-- Prénom -->
+              <span>Pr&eacute;nom : </span>
+              <input type="text" id="prenom" name="prenomutilisateur" required />
+              <strong><abbr title="Obligatoire"></abbr>*</strong>
+            </label>
+          </p>
+
+          <p>
+            <label for="age"> <!-- Age -->
+              <span>Age : </span>
+              <input type="number" id="age" name="ageutilisateur" required />
+              <strong><abbr title="Obligatoire"></abbr>*</strong>
+            </label>
+          </p>
+
+          <p>
+            <label for="naissance"> <!-- Date de naissance -->
+              <span>Date de naissance :</span>
+              <input type="date" id="naissance" name="datedenaissance" maxlength="10" /> <em>formatté selon jj/mm/aaaa</em>
+            </label>
+          </p>
+
+          <p>
+            <label for="email"> <!-- E-mail -->
+              <span>E-mail : </span>
+              <input type="email" id="age" name="mailutilisateur" required />
+              <strong><abbr title="Obligatoire"></abbr>*</strong>
+            </label>
+          </p>
+
+          <nav class="header_nav"> <!-- Villes -->
+          <select class="navbar_select" onchange="location = this.option[this.selectIndex].value"> <!-- display none si la largeur depasse 700px sinon navbar normal -->
+              <option value="style.css">CHOISSISER VOTRE VILLES</option>
+              <option value="">Lyon</option>
+              <option value="">Paris</option>
+              <option value="">Saint-Etienne</option>
+              <option value="">Nantes</option>
+              <option value="">Bordeaux</option>
+              <option value="">Toulouse</option>
+          </select>
+          </nav>
+
+          <p>
+            <label for="password"> <!-- Mot de passe -->
+              <span>Mot de passe : </span>
+              <input type="password" id="age" name="passwordutilisateur" required />
+              <strong><abbr title="Obligatoire"></abbr>*</strong>
+            </label>
+
+          </p>
+<!-- ##################################################### -->
+            <fieldset> <!-- input RADIO cas rond-->
+                <legend>Sexe</legend>
+                  <p>
+                    <input type="radio" name="sexe" id="sexe_1" value="1" />
+                    <label for="sexe_1">Masculins</label>
+                  </p>
+                  <p>
+                    <input type="radio" name="sexe" id="sexe_2" value="2" />
+                    <label for="sexe_2">féminin</label>
+                  </p>
+                  <p>
+                    <input type="radio" name="sexe" id="sexe_3" value="3" />
+                    <label for="sexe_3">H&eacute;t&eacute;ro</label>
+                  </p>
+                  <p>
+                    <input type="radio" name="sexe" id="sexe_4" value="4" />
+                    <label for="sexe_4">Bisexuel</label>
+                  </p>
+                  <p>
+                    <input type="radio" name="sexe" id="sexe_5" value="5" />
+                    <label for="sexe_5">Extra-terrestre</label>
+                  </p>
+                  <p>
+                    <input type="radio" name="sexe" id="sexe_6" value="6" />
+                    <label for="sexe_6">Sp&eacute;cimen (pieuvre)</label>
+                  </p>
+            </fieldset>
+
+
+        <!-- ##################################################### -->
+
+        <!-- Case a cocher -->
+          <p>
+            <input type="checkbox" id="choix_1" name="choix" value="1">
+            <label for="choix_1">Oui, j'accepte</label>
+          </p>
+          <p>
+            <label for="choix_2"> <!-- input dans un label fonctionne aussi -->
+              <input type="checkbox" id="choix_2" name="choix" value="1">
+              Non, je refuse
+            </label>
+          </p>
+
+          <input type="submit" value="Valider" />
+
+        </form>
+
+    </body>
+                           <!-- ################################################################################ -->
+</html>
