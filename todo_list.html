@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODO LIST</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+        
+        .flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>MY TODO LIST !</h1>
+    <form action="https://google.fr" method="POST" class="flex" id="form">
+        <fieldset>
+            <label for="name">PRENOM</label>
+            <input id="name" type="text" name="name" />
+
+            <label for="first_name">NOM</label>
+            <input id="first_name" type="text" name="fname" />
+
+            <!-- 
+            <label for="age">AGE</label>
+            <input id="age" type="number" name="numb" />
+
+            <label for="email">EMAIL</label>
+            <input id="email" type="email" name="mail" />
+
+            <label for="mdp">MOT DE PASSE</label>
+            <input id="mdp" type="password" name="pass" />
+            -->
+        </fieldset>
+        <button type="submit" class="sub">Valider</button>
+    </form>
+
+    <script>
+        //cibler le submit.
+        document.querySelector("form").addEventListener("submit", function(e) {
+            //cibler les EL
+            let nameI = document.querySelector("#name").value;
+            let input_value2 = document.querySelector("#first_name").value;
+            e.preventDefault(); //concernet submit annule l'action.
+            let createDiv = document.createElement("div"); //création de l'element div.
+            document.body.appendChild(createDiv); //placer l'element div.
+            createDiv.textContent = nameI + " " + input_value2 + "   :  ";
+            //Crée un bouton de supression dans mon div.
+            let createBut = document.createElement("button"); //création du bouton
+            createBut.type = "submit"; //donner un type.
+            createDiv.appendChild(createBut); //placer l'El button supression.
+            createBut.textContent = "Delete"; //ajouter du text.
+            createBut.addEventListener("click", function() {
+                createDiv.a = ;
+            });
+        });
+    </script>
+</body>
+
+</html>
